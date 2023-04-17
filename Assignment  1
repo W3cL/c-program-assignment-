@@ -1,5 +1,4 @@
-
-[11/04, 9:45 pm] Srikanth Sse: #include<stdio.h>
+#include<stdio.h>
 #include<math.h>
  int main()
 {
@@ -12,7 +11,8 @@ scanf("%d",&a1);
  printf("%d",a4);
 return 0;
 }
-[11/04, 10:34 pm] VEDAVYAS SARMA LOKA: #include <stdio.h>
+
+#include <stdio.h>
  
 int main()
 {
@@ -20,7 +20,11 @@ int main()
 	printf("SUM N NATURAL NUMBERS IS ((n(n+1))/2)");
 	return 0;
 }
-[11/04, 10:55 pm] VEDAVYAS SARMA LOKA: #include <stdio.h>
+
+
+
+
+#include <stdio.h>
 
 int main() {
     int num, i;
@@ -41,7 +45,11 @@ int main() {
     printf("Factorial of %d = %lld", num, factorial);
     return 0;
 }
-[11/04, 11:02 pm] VEDAVYAS SARMA LOKA: #include <stdio.h>
+
+
+
+
+#include <stdio.h>
 
 int main() {
     int num, sum = 0, rem;
@@ -57,7 +65,13 @@ int main() {
     printf("The sum of the digits is: %d\n", sum);
     return 0;
 }
-[11/04, 11:04 pm] VEDAVYAS SARMA LOKA: #include <stdio.h>
+
+
+
+
+
+
+#include <stdio.h>
 
 int main() {
     int n, i, j;
@@ -78,4 +92,14 @@ int main() {
         printf("%d ", series[i]);
     }
     // Calculate and print the remaining terms of the series
-    for (i = n; i < series[
+    for (i = n; i < series[n - 1]; i++) {
+        int sum = 0;
+        for (j = i - n; j < i; j++) {
+            sum += series[j];
+        }
+        series[i] = sum;
+        printf("%d ", series[i]);
+    }
+    printf("\n");
+    return 0;
+}
