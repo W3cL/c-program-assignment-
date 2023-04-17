@@ -1,1 +1,81 @@
 
+[11/04, 9:45 pm] Srikanth Sse: #include<stdio.h>
+#include<math.h>
+ int main()
+{
+ int a1,a2,a3,a4;
+ printf("Given natural number:");
+scanf("%d",&a1);
+ a2=a1+1;
+ a3=a1*a2;
+ a4=a3/2;
+ printf("%d",a4);
+return 0;
+}
+[11/04, 10:34 pm] VEDAVYAS SARMA LOKA: #include <stdio.h>
+ 
+int main()
+{
+	int n;
+	printf("SUM N NATURAL NUMBERS IS ((n(n+1))/2)");
+	return 0;
+}
+[11/04, 10:55 pm] VEDAVYAS SARMA LOKA: #include <stdio.h>
+
+int main() {
+    int num, i;
+    long long factorial = 1;
+
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("Error: Factorial of a negative number is undefined.");
+        return 0;
+    }
+
+    for (i = 1; i <= num; ++i) {
+        factorial *= i;
+    }
+
+    printf("Factorial of %d = %lld", num, factorial);
+    return 0;
+}
+[11/04, 11:02 pm] VEDAVYAS SARMA LOKA: #include <stdio.h>
+
+int main() {
+    int num, sum = 0, rem;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while (num != 0) {
+        rem = num % 10;
+        sum += rem;
+        num /= 10;
+    }
+
+    printf("The sum of the digits is: %d\n", sum);
+    return 0;
+}
+[11/04, 11:04 pm] VEDAVYAS SARMA LOKA: #include <stdio.h>
+
+int main() {
+    int n, i, j;
+    printf("Enter the number of previous terms to add: ");
+    scanf("%d", &n);
+
+    int series[n];
+    // Initialize the first n-1 terms of the series with 1
+    for (i = 0; i < n - 1; i++) {
+        series[i] = 1;
+    }
+    // Calculate the nth term of the series
+    series[n - 1] = n;
+
+    printf("The %d-Phebonacci series is:\n", n);
+    // Print the first n terms of the series
+    for (i = 0; i < n; i++) {
+        printf("%d ", series[i]);
+    }
+    // Calculate and print the remaining terms of the series
+    for (i = n; i < series[
