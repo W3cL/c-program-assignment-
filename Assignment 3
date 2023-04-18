@@ -1,1 +1,379 @@
+1.#include <stdio.h> 
+  
+ // Define the structure for employee details 
+ struct Employee { 
+     int id; 
+     char name[50]; 
+     char designation[50]; 
+     char department[50]; 
+     float salary; 
+ }; 
+  
+ int main() { 
+     struct Employee emp; 
+  
+     // Prompt the user to enter employee details 
+     printf("Enter employee ID:\n"); 
+     scanf("%d", &emp.id); 
+  
+     printf("Enter employee name:\n"); 
+     scanf("%s", emp.name); 
+  
+     printf("Enter employee designation:\n"); 
+     scanf("%s", emp.designation); 
+  
+     printf("Enter employee department:\n"); 
+     scanf("%s", emp.department); 
+  
+     printf("Enter employee salary:\n"); 
+     scanf("%f", &emp.salary); 
+  
+     // Display the employee details 
+     printf("\nEmployee Details\n"); 
+     printf("ID: %d\n", emp.id); 
+     printf("Name: %s\n", emp.name); 
+     printf("Designation: %s\n", emp.designation); 
+     printf("Department: %s\n", emp.department); 
+     printf("Salary: %f\n", emp.salary); 
+  
+     return 0; 
+ }
+2.#include<stdio.h> 
+ struct employee 
+ { 
+      int eno; 
+      char ename[20]; 
+      int salary; 
+ }emp[10]; 
+ int main() 
+ { 
+      int i,high,n; 
+      printf("/*How many employee info\nyou want to accept : "); 
+      printf("Enter Limit: "); 
+      scanf("%d",&n); 
+      printf("-----------------------------\n"); 
+      printf("Enter details for %d employees:",n); 
+      printf("\n-----------------------------\n"); 
+      for(i=0;i<n;i++) 
+      { 
+           printf("Employee Number: "); 
+           scanf("%d",&emp[i].eno); 
+           printf("Name           : "); 
+           scanf("%s",emp[i].ename); 
+           printf("Salary         : "); 
+           scanf("\n %d",&emp[i].salary); 
+           printf("-----------------------------\n"); 
+      } 
+      high=emp[0].salary; 
+      for(i=0;i<n;i++) 
+      { 
+           if(emp[i].salary>high) 
+           high=emp[i].salary; 
+      } 
+      printf("Highest salary employee details:"); 
+      printf("\n-----------------------------\n"); 
+      printf("EMPNO    NAME  SALARY\n"); 
+      for(i=0;i<n;i++) 
+      { 
+           if(emp[i].salary==high) 
+           printf("\n %d\t%s\t%d",emp[i].eno,emp[i].ename,emp[i].salary); 
+      } 
+      return 0; 
+ }
+3.#include <stdio.h> 
+ struct student { 
+     char firstName[50]; 
+     int roll; 
+     float marks; 
+ } s[5]; 
+  
+ int main() { 
+     int i; 
+#include<stdio.h> 
+ /* Defining Structre*/ 
+ struct bank 
+ { 
+      int acc_no; 
+      char name[20]; 
+      int bal; 
+ }b[3]; 
+ /Function to find the details of customer whose balance < 100./ 
+ void check(struct bank b[],int n) /Passing Array of structure to function/ 
+ { 
+      int i; 
+      printf("\nCustomer Details whose Balance < 100 Rs. \n"); 
+      printf("----------------------------------------------\n"); 
+      for(i=0;i<n;i++) 
+      { 
+           if(b[i].bal<100) 
+           { 
+                printf("Account Number : %d\n",b[i].acc_no); 
+                printf("Name           : %s\n",b[i].name); 
+                printf("Balance        : %d\n",b[i].bal); 
+                printf("------------------------------\n"); 
+           } 
+      } 
+ } 
+ int main() 
+ { 
+      int i; 
+      for(i=0;i<3;i++) 
+      { 
+           printf("Enter Details of Customer %d\n",i+1); 
+           printf("------------------------------\n"); 
+           printf("Enter Account Number : "); 
+           scanf("%d",&b[i].acc_no); 
+           printf("Enter Name           : "); 
+           scanf("%s",b[i].name); 
+           printf("Enter Balance        : "); 
+           scanf("%d",&b[i].bal); 
+           printf("------------------------------\n"); 
+      } 
+      check(b,3);           //call function check 
+      return 0; 
+ 4.     printf("Enter information of students:\n"); 
+  
+     // storing information 
+     for (i = 0; i < 5; ++i) { 
+         s[i].roll = i + 1; 
+         printf("\nFor roll number%d,\n", s[i].roll); 
+         printf("Enter first name: "); 
+         scanf("%s", s[i].firstName); 
+         printf("Enter marks: "); 
+         scanf("%f", &s[i].marks); 
+     } 
+     printf("Displaying Information:\n\n"); 
+  
+     // displaying information 
+     for (i = 0; i < 5; ++i) { 
+         printf("\nRoll number: %d\n", i + 1); 
+         printf("First name: "); 
+         puts(s[i].firstName); 
+         printf("Marks: %.1f", s[i].marks); 
+         printf("\n"); 
+     } 
+     return 0; 
+ }
 
+5.#include<stdio.h> 
+ struct employee 
+ { 
+      int eno; 
+      char ename[20]; 
+      int salary; 
+ }emp[10]; 
+ int main() 
+ { 
+      int i,high,n; 
+      printf("/*How many employee info\nyou want to accept : "); 
+      printf("Enter Limit: "); 
+      scanf("%d",&n); 
+      printf("-----------------------------\n"); 
+      printf("Enter details for %d employees:",n); 
+      printf("\n-----------------------------\n"); 
+      for(i=0;i<n;i++) 
+      { 
+           printf("Employee Number: "); 
+           scanf("%d",&emp[i].eno); 
+           printf("Name           : "); 
+           scanf("%s",emp[i].ename); 
+           printf("Salary         : "); 
+           scanf("\n %d",&emp[i].salary); 
+           printf("-----------------------------\n"); 
+      } 
+      high=emp[0].salary; 
+      for(i=0;i<n;i++) 
+      { 
+           if(emp[i].salary>high) 
+           high=emp[i].salary; 
+      } 
+      printf("Highest salary employee details:"); 
+      printf("\n-----------------------------\n"); 
+      printf("EMPNO    NAME  SALARY\n"); 
+      for(i=0;i<n;i++) 
+      { 
+           if(emp[i].salary==high) 
+           printf("\n %d\t%s\t%d",emp[i].eno,emp[i].ename,emp[i].salary); 
+      } 
+      return 0; 
+ }
+
+6.#include<stdio.h> 
+ #include<stdlib.h> 
+ #include<string.h> 
+ struct book 
+ { 
+      int  b_no; 
+      char b_name[40]; 
+      char b_author[40]; 
+      int  no_pages; 
+ }; 
+ int main() 
+ { 
+      struct book b[20]; 
+      int    ch,n,i,count = 0; 
+      char   temp[40]; 
+      do 
+      { 
+           printf("\t\tMENU"); 
+           printf("\n-------------------------------------\n"); 
+           printf("PRESS 1.TO ADD BOOK DETAILS."); 
+           printf("\nPRESS 2.TO DISPLAY BOOK DETAILS."); 
+           printf("\nPRESS 3.TO DISPLAY BOOK OF GIVEN AUTHOR."); 
+           printf("\nPRESS 4.TO COUNT NUMBER OF BOOKS."); 
+           printf("\nPRESS 5.TO EXIT."); 
+           printf("\n-------------------------------------\n"); 
+           printf("Enter Your Choice: "); 
+           scanf("%d",&ch); 
+           switch(ch) 
+           { 
+                case 1: 
+                     printf("\nHow Many Records You Want to Add: "); 
+                     scanf("%d",&n); 
+                     printf("-------------------------------------\n"); 
+                     printf("Add Details of %d Book\n",n); 
+                     printf("-------------------------------------\n"); 
+                     for(i = 0 ; i < n ; i++) 
+                     { 
+                          printf("Enter Book No.     : "); 
+                          scanf("%d",&b[i].b_no); 
+                          printf("Book Name          : "); 
+                          scanf("%s",b[i].b_name); 
+                          printf("Enter Author Name  : "); 
+                          scanf("%s",b[i].b_author); 
+                          printf("Enter No. of Pages : "); 
+                          scanf("%d",&b[i].no_pages); 
+                          printf("-------------------------------------\n"); 
+                     } 
+                     break; 
+                case 2: 
+                     printf("\n\t\tDetails of All Book"); 
+                     printf("\n-----------------------------------------------------------\n") 
+                     printf("\n------------------------------------------------------------"); 
+                     for( i = 0 ; i < n ; i++) 
+                     { 
+                          printf("\n %d\t  %s\t  %s\t  %d",b[i].b_no,b[i].b_name,b[i].b_author,b[i].no_pages); 
+                     } 
+                     printf("\n\n"); 
+                     break; 
+              case 3: 
+                     printf("\nEnter Author Name: "); 
+                     scanf("%s",temp); 
+                     printf("--------------------------------------"); 
+                     for( i = 0 ; i < n ; i++) 
+                     { 
+                          if(strcmp(b[i].b_author,temp) == 0) 
+                          { 
+                               printf("\n%s\n",b[i].b_name); 
+                          } 
+                     } 
+                     break; 
+                case 4 : 
+                     for( i = 0 ; i < n ; i++) 
+                     { 
+                          count++; 
+                     } 
+                     printf("\nTotal Number of Books in Library : %d\n",count); 
+                     printf("-----------------------------------------\n"); 
+                     break; 
+                case 5 : 
+                     exit(0); 
+           } 
+      }while(ch != 5); 
+      return 0; 
+ }
+
+7.# include < stdio.h > 
+ # include < conio.h > 
+ struct  student 
+ { 
+ int roll_num ; char name[20] ; struct Date 
+ { 
+       int D ; 
+       int M ; 
+       int Y ; 
+ } bd, ad ; 
+ } ; 
+  
+ int  main( ) 
+ { 
+ int r ; 
+ struct student a ; 
+ printf("\n Enter Student Details\n" ) ; 
+ printf("----------------------------------------------------\n" ) ; 
+ printf(" Enter Roll-Number : ") ; 
+ scanf("%d", &a.roll_num ) ; 
+ printf(" Enter Name : " ) ; 
+ scanf("%s",a.name ) ; 
+ printf(" Enter Birth-Date : ") ; 
+ scanf("%d-%d-%d", &a.bd.D, &a.bd.M, &a.bd.Y ) ; 
+ printf(" Enter Admission-Date : ") ; 
+ scanf("%d-%d-%d", &a.ad.D, &a.ad.M, &a.ad.Y) ; 
+ r = a.ad.Y-a.bd.Y ; 
+ printf("----------------------------------------------------\n") ; 
+ printf("\n Approximate Age of Student at the Time of Admission\n") ; 
+ printf("----------------------------------------------------\n") ; 
+ printf("\t%d Years", r) ; 
+ return 0 ; 
+ }
+
+8.#include <stdio.h> 
+  int main(){ 
+     int inputInteger; 
+     char inputCharacter; 
+     float inputFloat; 
+       /* Take input from user using scanf function */ 
+     printf("Enter Integer,Character and Float number\n"); 
+     scanf("%d %c %f", &inputInteger, &inputCharacter, 
+         &inputFloat); 
+       printf("\nInteger you entered is : %d", inputInteger); 
+     printf("\nCharacter you entered is : %c", inputCharacter); 
+     printf("\nFloating point number you entered is : %f", 
+         inputFloat); 
+       return 0; 
+    }
+
+9.#include <stdio.h> 
+ #include <math.h> 
+  
+ // Define the union shape with two members 
+ union Shape { 
+     float radius; 
+     struct { 
+         float length; 
+         float width; 
+     } rectangle; 
+ }; 
+  
+ int main() { 
+     union Shape shape; 
+  
+     // Prompt the user to choose a shape 
+     char shapeType; 
+     printf("Enter shape type: (c for circle, r for rectangle)\n"); 
+     scanf("%c", &shapeType); 
+  
+     // Prompt the user to enter the shape's dimensions 
+     if (shapeType == 'c') { 
+         printf("Enter the radius of the circle:\n"); 
+         scanf("%f", &shape.radius); 
+  
+         // Calculate and print the area of the circle 
+         float area = M_PI * pow(shape.radius, 2); 
+         printf("Area of circle: %f\n", area); 
+     } else if (shapeType == 'r') { 
+         printf("Enter the length of the rectangle:\n"); 
+         scanf("%f", &shape.rectangle.length); 
+  
+         printf("Enter the width of the rectangle:\n"); 
+         scanf("%f", &shape.rectangle.width); 
+  
+         // Calculate and print the area of the rectangle 
+         float area = shape.rectangle.length * shape.rectangle.width; 
+         printf("Area of rectangle: %f\n", area); 
+     } else { 
+         printf("Invalid shape type!\n"); 
+     } 
+  
+     return 0; 
+ }
